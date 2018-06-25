@@ -51,11 +51,11 @@ The `animatedScrollTo` method takes a single parameter that might be an `Object`
 }
 ```
 
-### - to (required)
+### `to` (required)
 The target Y-Offset as positive `Integer`
 
-### - duration (optional)
+### `duration` (optional)
 The animation duration in milliseconds. Defaults to `400`
 
-### - easing (optional)
+### `easing` (optional)
 The easing function that is used to calculate the animation. See https://github.com/janrembold/es6-easings for easing variations. Defaults to `easeOutQuad`
