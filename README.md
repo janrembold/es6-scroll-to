@@ -45,9 +45,9 @@ The `animatedScrollTo` method takes a single parameter that might be an `Object`
 
 ```
 {
+    to: [Number], // required
     duration: [Integer], // optional, defaults to 400
-    easing: [function], // optional, defaults to 'easeOutQuad'
-    to: [Number] // required
+    easing: [function] // optional, defaults to 'easeOutQuad'    
 }
 ```
 
