@@ -8,12 +8,14 @@ document.getElementById('scroll-600').onclick = function() {
 document.getElementById('scroll-1200').onclick = function() {
     animatedScrollTo({
         to: 1200,
-        easing: easeInOutBack
+        easing: easeInOutBack,
+        duration: 3500
     });
 };
 
 document.getElementById('scroll-top').onclick = function() {
     animatedScrollTo({
-        easing: easeInQuint
+        easing: easeInQuint,
+        duration: 1000
     });
 };

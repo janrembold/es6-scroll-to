@@ -9,16 +9,14 @@
         to: 0
     };
 
-    var animatedScrollTo = function animatedScrollTo(args) {
+    var animatedScrollTo = function animatedScrollTo() {
+        var args = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
         if (isInteger(args)) {
-            args = {
-                to: args
-            };
+            args = { to: args };
         }
 
-        //const options = extend(defaults, args);
-        var options = Object.assign({}, defaults, args);
-
+        var options = extend(defaults, args);
         options.startingYOffset = window.pageYOffset;
         options.distanceYOffset = parseInt(options.to, 10) - options.startingYOffset;
 
@@ -59,6 +57,14 @@
         }
     };
 
+    var extend = function extend(defaults, options) {
+        var extendedOptions = {};
+        for (var key in defaults) {
+            extendedOptions[key] = options[key] || defaults[key];
+        }
+        return extendedOptions;
+    };
+
     const easeInQuint = (t, b, c, d) => {
         return c*(t/=d)*t*t*t*t + b;
     };
@@ -75,13 +81,15 @@
     document.getElementById('scroll-1200').onclick = function () {
         animatedScrollTo({
             to: 1200,
-            easing: easeInOutBack
+            easing: easeInOutBack,
+            duration: 3500
         });
     };
 
     document.getElementById('scroll-top').onclick = function () {
         animatedScrollTo({
-            easing: easeInQuint
+            easing: easeInQuint,
+            duration: 1000
         });
     };
 

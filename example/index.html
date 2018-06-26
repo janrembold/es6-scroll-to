@@ -10,21 +10,51 @@
             margin: 0;
             padding: 0;
         }
-        div {
-            text-align: center;
+        .container {
+            height:560px;
             padding: 20px;
+            background: #f0f9ff; 
+            background: -moz-linear-gradient(top, #f0f9ff 0%, #cbebff 47%, #3fb8ff 100%); 
+            background: -webkit-linear-gradient(top, #f0f9ff 0%,#cbebff 47%,#3fb8ff 100%); 
+            background: linear-gradient(to bottom, #f0f9ff 0%,#cbebff 47%,#3fb8ff 100%);
+        }
+        pre {
+            background: white;
+            padding: 10px;
+            border: 1px solid grey;
+            overflow: auto;
         }
     </style>
 </head>
 <body>
-    <div style="height:560px;background-color:lightblue">
-        <button id="scroll-600">Scroll to 600px</button>
+    <div class="container">
+        <button id="scroll-600">Scroll to 600px</button>        
+        <pre>
+// Defaults: duration: 400, easing: easeOutQuad
+animatedScrollTo(600);
+
+// ...equals to 
+animatedScrollTo({
+    to: 600
+});</pre>        
     </div>
-    <div style="height:560px;background-color:lightcoral">
+    <div class="container">
         <button id="scroll-1200">Scroll to 1200px</button>
+        <pre>
+animatedScrollTo({
+    to: 1200,
+    easing: easeInOutBack
+    duration: 3500
+});</pre>    
     </div>
-    <div style="height:560px">
+    <div class="container" style="height:560px">
         <button id="scroll-top">Scroll top</button>
+        <pre>
+// Defaults: to: 0            
+animatedScrollTo({
+    easing: easeInQuint
+    duration: 1000
+});</pre>
     </div>
     
     <script src="bundle.js"></script>
