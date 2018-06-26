@@ -1,5 +1,7 @@
 # scroll-to
-Vanilla JavaScript micro function for animated scrolling written in ES6
+Vanilla JavaScript micro function for animated scrolling written in ES6.
+
+See demo here: https://janrembold.github.io/es6-scroll-to/example/
 
 ## Installation
 
