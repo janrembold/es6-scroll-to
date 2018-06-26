@@ -6,15 +6,12 @@ const defaults = {
     to: 0
 };
 
-export const animatedScrollTo = (args) => {
+export const animatedScrollTo = (args=0) => {
     if(isInteger(args)) {
-        args = {
-            to: args
-        };
+        args = { to: args };
     }
 
     const options = extend(defaults, args);
-
     options.startingYOffset = window.pageYOffset;
     options.distanceYOffset = parseInt(options.to, 10) - options.startingYOffset;
 

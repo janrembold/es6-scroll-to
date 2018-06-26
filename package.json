@@ -1,6 +1,6 @@
 {
   "name": "es6-scroll-to",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vanilla JavaScript micro function for animated scrolling written in ES6",
   "main": "index.js",
   "repository": "https://github.com/janrembold/es6-scroll-to.git",
@@ -10,8 +10,11 @@
     "start": "rollup -c --watch"
   },
   "devDependencies": {
+    "babel-core": "6",
+    "babel-preset-env": "^1.7.0",
     "es6-easings": "^1.0.0",
     "rollup": "^0.61.2",
+    "rollup-plugin-babel": "^3.0.5",
     "rollup-plugin-node-resolve": "^3.3.0"
   }
 }
