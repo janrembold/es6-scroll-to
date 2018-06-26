@@ -1,6 +1,6 @@
 {
   "name": "es6-scroll-to",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vanilla JavaScript micro function for animated scrolling written in ES6",
   "main": "index.js",
   "repository": "https://github.com/janrembold/es6-scroll-to.git",
