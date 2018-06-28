@@ -1,5 +1,8 @@
-import {animatedScrollTo} from '../index';
+declare var document: any;
+
+import {animatedScrollTo} from '../lib/index';
 import {easeInOutBack,easeInQuint} from 'es6-easings';
+
 
 document.getElementById('scroll-600').onclick = function() {
     animatedScrollTo(600);
