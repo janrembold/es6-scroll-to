@@ -9,14 +9,18 @@
   "author": "janrembold <janrembold@gmx.net>",
   "license": "MIT",
   "scripts": {
-    "start": "rollup -c --watch"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "example": "tsc && rollup"
   },
   "devDependencies": {
     "babel-core": "6",
     "babel-preset-env": "^1.7.0",
-    "es6-easings": "^1.0.0",
+    "es6-easings": "https://github.com/janrembold/es6-easings.git#master",
     "rollup": "^0.61.2",
     "rollup-plugin-babel": "^3.0.5",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "typescript": "^2.9.2"
   }
 }
