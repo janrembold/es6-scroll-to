@@ -1,19 +1,27 @@
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
-import typescript from 'rollup-plugin-typescript';
+import rollupTypescript from 'rollup-plugin-typescript';
+import typescript from 'typescript';
 
 export default {
-    input: 'example/index.js',
+    input: 'example/index.ts',
     output: {
         file: 'example/bundle.js',
         format: 'iife'
     },
     plugins: [
         resolve({jsnext: true}),
-        typescript(),
+        rollupTypescript({
+            typescript: typescript
+
+        }),
         babel({
             babelrc: false,
-            exclude: 'node_modules/**',
+            exclude: [
+                'node_modules/**',
+                'src/**',
+                'lib/**'
+            ],
             presets: [
                 ["env", {modules: false}]
             ]

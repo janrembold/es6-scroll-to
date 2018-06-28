@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "example": "tsc && rollup"
+    "example": "tsc && rollup -c example/rollup.config.js"
   },
   "devDependencies": {
     "babel-core": "6",
